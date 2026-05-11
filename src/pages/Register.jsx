@@ -7,7 +7,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { toast } from "react-toastify";
-import { auth } from "../firebase/firebase.config.js";
+import { auth, isFirebaseConfigured } from "../firebase/firebase.config.js";
 import { usePageTitle } from "../hooks/usePageTitle.js";
 
 const googleProvider = new GoogleAuthProvider();
@@ -32,6 +32,10 @@ export default function Register() {
 
   async function handleRegister(e) {
     e.preventDefault();
+    if (!auth) {
+      toast.error("Firebase is not configured. Add VITE_FIREBASE_* env values.");
+      return;
+    }
     const issues = validatePassword(password);
     if (issues.length) {
       toast.error(`Password must include: ${issues.join(", ")}`);
@@ -54,6 +58,10 @@ export default function Register() {
   }
 
   async function handleGoogle() {
+    if (!auth) {
+      toast.error("Firebase is not configured. Add VITE_FIREBASE_* env values.");
+      return;
+    }
     setBusy(true);
     try {
       await signInWithPopup(auth, googleProvider);
@@ -75,6 +83,11 @@ export default function Register() {
         <p className="text-center text-base-content/60 text-sm mt-2">
           Password needs uppercase, lowercase, and 6+ characters.
         </p>
+        {!isFirebaseConfigured && (
+          <div className="alert alert-warning mt-4 text-sm">
+            Firebase auth is not configured for this deployment yet.
+          </div>
+        )}
 
         <form className="mt-8 space-y-4" onSubmit={handleRegister}>
           <label className="form-control w-full">

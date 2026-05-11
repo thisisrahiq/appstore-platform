@@ -1,7 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../providers/AuthProvider.jsx";
 import { signOut } from "firebase/auth";
-import { auth } from "../firebase/firebase.config.js";
+import { auth, isFirebaseConfigured } from "../firebase/firebase.config.js";
 import { toast } from "react-toastify";
 import { FiLogOut } from "react-icons/fi";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
@@ -13,6 +13,10 @@ export default function Navbar() {
   const { user, loading } = useAuth();
 
   async function handleLogout() {
+    if (!auth) {
+      toast.error("Firebase is not configured.");
+      return;
+    }
     try {
       await signOut(auth);
       toast.success("Signed out successfully");
@@ -87,7 +91,11 @@ export default function Navbar() {
             </button>
           </div>
         ) : (
-          <NavLink to="/login" className="btn btn-primary btn-sm sm:btn-md rounded-full">
+          <NavLink
+            to="/login"
+            className="btn btn-primary btn-sm sm:btn-md rounded-full"
+            title={isFirebaseConfigured ? "Login" : "Firebase not configured"}
+          >
             Login
           </NavLink>
         )}

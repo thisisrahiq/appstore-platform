@@ -13,5 +13,13 @@ const firebaseConfig = {
 };
 
 
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+const requiredKeys = [
+  "apiKey",
+  "authDomain",
+  "projectId",
+  "appId",
+];
+
+export const isFirebaseConfigured = requiredKeys.every((k) => Boolean(firebaseConfig[k]));
+const app = isFirebaseConfigured ? initializeApp(firebaseConfig) : null;
+export const auth = app ? getAuth(app) : null;

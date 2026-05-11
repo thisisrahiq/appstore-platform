@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
-import { auth } from "../firebase/firebase.config.js";
+import { auth, isFirebaseConfigured } from "../firebase/firebase.config.js";
 import { useAuth } from "../providers/AuthProvider.jsx";
 import { usePageTitle } from "../hooks/usePageTitle.js";
 
@@ -20,6 +20,10 @@ export default function Profile() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (!auth) {
+      toast.error("Firebase is not configured. Add VITE_FIREBASE_* env values.");
+      return;
+    }
     if (!auth.currentUser) return;
     setBusy(true);
     try {
@@ -69,6 +73,11 @@ export default function Profile() {
 
       <div className="rounded-3xl glass-card border border-white/10 p-8 md:p-10">
         <h2 className="text-xl font-display font-bold">Update profile</h2>
+        {!isFirebaseConfigured && (
+          <div className="alert alert-warning mt-4 text-sm">
+            Firebase auth is not configured for this deployment yet.
+          </div>
+        )}
         <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
           <label className="form-control w-full">
             <span className="label-text">Name</span>

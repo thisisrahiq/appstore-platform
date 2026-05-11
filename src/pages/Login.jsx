@@ -6,7 +6,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { toast } from "react-toastify";
-import { auth } from "../firebase/firebase.config.js";
+import { auth, isFirebaseConfigured } from "../firebase/firebase.config.js";
 import { usePageTitle } from "../hooks/usePageTitle.js";
 
 const googleProvider = new GoogleAuthProvider();
@@ -23,6 +23,10 @@ export default function Login() {
 
   async function handleEmailLogin(e) {
     e.preventDefault();
+    if (!auth) {
+      toast.error("Firebase is not configured. Add VITE_FIREBASE_* env values.");
+      return;
+    }
     setBusy(true);
     try {
       await signInWithEmailAndPassword(auth, email.trim(), password);
@@ -36,6 +40,10 @@ export default function Login() {
   }
 
   async function handleGoogle() {
+    if (!auth) {
+      toast.error("Firebase is not configured. Add VITE_FIREBASE_* env values.");
+      return;
+    }
     setBusy(true);
     try {
       await signInWithPopup(auth, googleProvider);
@@ -57,6 +65,11 @@ export default function Login() {
         <p className="text-center text-base-content/60 text-sm mt-2">
           Access installs, reviews, and your profile.
         </p>
+        {!isFirebaseConfigured && (
+          <div className="alert alert-warning mt-4 text-sm">
+            Firebase auth is not configured for this deployment yet.
+          </div>
+        )}
 
         <form className="mt-8 space-y-4" onSubmit={handleEmailLogin}>
           <label className="form-control w-full">
