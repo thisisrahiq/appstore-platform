@@ -10,24 +10,27 @@ import Profile from "../pages/Profile.jsx";
 import About from "../pages/About.jsx";
 import NotFound from "../pages/NotFound.jsx";
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <MainLayout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: "apps", element: <Apps /> },
-      { path: "login", element: <Login /> },
-      { path: "register", element: <Register /> },
-      { path: "about", element: <About /> },
-      {
-        element: <PrivateRoute />,
-        children: [
-          { path: "app/:id", element: <AppDetails /> },
-          { path: "profile", element: <Profile /> },
-        ],
-      },
-    ],
-  },
-  { path: "*", element: <NotFound /> },
-]);
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "apps", element: <Apps /> },
+        { path: "login", element: <Login /> },
+        { path: "register", element: <Register /> },
+        { path: "about", element: <About /> },
+        {
+          element: <PrivateRoute />,
+          children: [
+            { path: "app/:id", element: <AppDetails /> },
+            { path: "profile", element: <Profile /> },
+          ],
+        },
+      ],
+    },
+    { path: "*", element: <NotFound /> },
+  ],
+  { basename: "/appstore-platform" }
+);
