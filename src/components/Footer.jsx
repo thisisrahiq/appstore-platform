@@ -50,6 +50,17 @@ export default function Footer() {
         <p className="text-sm opacity-60">
           © {new Date().getFullYear()} AppStore Platform · Assignment showcase
         </p>
+        <p className="text-sm opacity-50 mt-1">
+          Developed by{" "}
+          <a
+            href="https://www.rahiq.dev/"
+            target="_blank"
+            rel="noreferrer"
+            className="link link-hover opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+          >
+            Rahiq
+          </a>
+        </p>
       </aside>
     </footer>
   );
