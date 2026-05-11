@@ -1,0 +1,202 @@
+[
+  {
+    "id": "app001",
+    "name": "Programming Hero",
+    "developer": "Programming Hero Ltd.",
+    "thumbnail": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=400&fit=crop",
+    "banner": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=500&fit=crop",
+    "downloads": 3500000,
+    "category": "Education",
+    "rating": 4.9,
+    "description": "Programming Hero is a fun and interactive way to learn programming with bite-sized lessons and real projects.",
+    "features": [
+      "Interactive coding lessons",
+      "Real-world projects",
+      "Gamified learning experience"
+    ],
+    "reviews": [
+      {
+        "user": "coder_nadia",
+        "rating": 5,
+        "comment": "Best app for beginners!"
+      },
+      {
+        "user": "dev_mike",
+        "rating": 5,
+        "comment": "Finally enjoying algorithms."
+      }
+    ]
+  },
+  {
+    "id": "app002",
+    "name": "FocusFlow",
+    "developer": "Mindful Labs",
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=400&fit=crop",
+    "banner": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&h=500&fit=crop",
+    "downloads": 1200000,
+    "category": "Productivity",
+    "rating": 4.7,
+    "description": "Deep work timers, habit tracking, and distraction blocking to help you ship more with less stress.",
+    "features": [
+      "Pomodoro and custom timers",
+      "Website blocker",
+      "Weekly insights"
+    ],
+    "reviews": [
+      {
+        "user": "sara_writes",
+        "rating": 5,
+        "comment": "My writing output doubled."
+      }
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "Neon Drift",
+    "developer": "Arcade Pulse",
+    "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=400&h=400&fit=crop",
+    "banner": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&h=500&fit=crop",
+    "downloads": 8900000,
+    "category": "Gaming",
+    "rating": 4.6,
+    "description": "High-speed arcade racing through synth cities with daily challenges and online leaderboards.",
+    "features": [
+      "120Hz optimized gameplay",
+      "Daily challenges",
+      "Cross-device cloud saves"
+    ],
+    "reviews": [
+      {
+        "user": "retro_kid",
+        "rating": 4,
+        "comment": "Controls feel amazing on mobile."
+      }
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "MathMentor AI",
+    "developer": "EduSpark",
+    "thumbnail": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=400&fit=crop",
+    "banner": "https://images.unsplash.com/photo-1509228468518-180dd4863704?w=1200&h=500&fit=crop",
+    "downloads": 2100000,
+    "category": "Education",
+    "rating": 4.5,
+    "description": "Step-by-step explanations for algebra through calculus with adaptive practice sets.",
+    "features": [
+      "AI-guided hints",
+      "Exam mode",
+      "Offline worksheets"
+    ],
+    "reviews": []
+  },
+  {
+    "id": "app005",
+    "name": "TaskOrbit",
+    "developer": "Northwind Tools",
+    "thumbnail": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=400&fit=crop",
+    "banner": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=500&fit=crop",
+    "downloads": 5400000,
+    "category": "Productivity",
+    "rating": 4.8,
+    "description": "Kanban boards, calendar sync, and team spaces built for async collaboration.",
+    "features": [
+      "Kanban and list views",
+      "Google Calendar sync",
+      "Team templates"
+    ],
+    "reviews": [
+      {
+        "user": "pm_alex",
+        "rating": 5,
+        "comment": "Replaced three tools for our squad."
+      }
+    ]
+  },
+  {
+    "id": "app006",
+    "name": "Pixel Legends",
+    "developer": "8Bit Forge",
+    "thumbnail": "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=400&h=400&fit=crop",
+    "banner": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&h=500&fit=crop",
+    "downloads": 6700000,
+    "category": "Gaming",
+    "rating": 4.4,
+    "description": "Roguelite dungeon crawler with weekly seasons and co-op raids.",
+    "features": [
+      "Seasonal events",
+      "Co-op raids",
+      "Cloud saves"
+    ],
+    "reviews": [
+      {
+        "user": "loot_goblin",
+        "rating": 4,
+        "comment": "Grindy but fair."
+      }
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "LanguageLift",
+    "developer": "Polyglot Inc.",
+    "thumbnail": "https://images.unsplash.com/photo-1546410534-bea803a6beab?w=400&h=400&fit=crop",
+    "banner": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=500&fit=crop",
+    "downloads": 4300000,
+    "category": "Education",
+    "rating": 4.6,
+    "description": "Speak confidently with conversation drills, pronunciation scoring, and native tutor audio.",
+    "features": [
+      "Speech recognition scoring",
+      "Travel phrase packs",
+      "Streak rewards"
+    ],
+    "reviews": [
+      {
+        "user": "wander_lisa",
+        "rating": 5,
+        "comment": "Nailed my trip prep in two weeks."
+      }
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "SheetSense",
+    "developer": "DataDesk",
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop",
+    "banner": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=500&fit=crop",
+    "downloads": 980000,
+    "category": "Productivity",
+    "rating": 4.3,
+    "description": "Spreadsheet assistant with natural-language formulas and anomaly alerts.",
+    "features": [
+      "Formula suggestions",
+      "Anomaly alerts",
+      "CSV import"
+    ],
+    "reviews": []
+  },
+  {
+    "id": "app009",
+    "name": "Skyline Builder",
+    "developer": "Metro Games",
+    "thumbnail": "https://images.unsplash.com/photo-1518709268805-4e9042af2177?w=400&h=400&fit=crop",
+    "banner": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=500&fit=crop",
+    "downloads": 3100000,
+    "category": "Gaming",
+    "rating": 4.2,
+    "description": "Relaxing city builder with weather systems, traffic AI, and creative mode.",
+    "features": [
+      "Creative sandbox",
+      "Traffic simulation",
+      "Mod support"
+    ],
+    "reviews": [
+      {
+        "user": "city_planner_jo",
+        "rating": 4,
+        "comment": "Zen mode is perfect after work."
+      }
+    ]
+  }
+]
